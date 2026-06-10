@@ -1,71 +1,575 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ═══ SEO ═══ -->
+  <title>Biraj Acherjee — Software Developer & ECE Student</title>
+  <meta name="description" content="Biraj Acherjee is a B.Tech ECE student at Narula Institute of Technology building software solutions through code, AI, and real-world problem solving. Seeking software internships." />
+  <meta name="keywords" content="Biraj Acherjee, software developer, ECE student, Narula Institute of Technology, React, Python, portfolio, internship, hackathon, web developer" />
+  <meta name="author" content="Biraj Acherjee" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ═══ Open Graph ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Biraj Acherjee — Software Developer" />
+  <meta property="og:description" content="B.Tech ECE student building software solutions through code, AI, and real-world problem solving." />
+  <meta property="og:url"         content="https://birajacherjee.dev/" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- ═══ Favicon ═══ -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230f1117'/><text x='50%' y='56%' font-size='44' font-weight='bold' text-anchor='middle' dominant-baseline='middle' font-family='monospace' fill='%2338bdf8'>BA</text></svg>" />
+
+  <!-- ═══ Fonts — Syne (display) + Outfit (body) ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- ═══════════════════════════════════════
+       CUSTOM CURSOR
+  ═══════════════════════════════════════ -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-trail" id="cursor-trail" aria-hidden="true"></div>
 
-  <header>
-    <h1>BIRAJ ACHERJEE</h1>
-    <p>Beginner Web Developer</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Biraj Acherjee — home">
+        <span class="logo-box">BA</span>
+        <span class="logo-text">Biraj<span class="logo-dot">.</span></span>
+      </a>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm a beginner web developer passionate about building clean and simple websites using HTML, CSS, and JavaScript. I'm currently learning and growing my skills every day.</p>
-  </section>
+      <!-- Desktop links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about"        class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"       class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"     class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+        <li><a href="#contact"      class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
 
-  <section id="projects">
-    <h2>Projects</h2>
+      <!-- CTA + hamburger -->
+      <div class="nav-right">
+        <a href="resume.pdf" download class="btn-resume" aria-label="Download resume PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-    <div class="project">
-      <h3>🎯 Basic Calculator</h3>
-      <p>A simple calculator that performs basic arithmetic operations like addition, subtraction, multiplication, and division using HTML, CSS, and JavaScript.</p>
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section id="hero" aria-label="Introduction">
+    <!-- Animated canvas background -->
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+    <!-- Floating blur orbs -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <!-- Status pill -->
+      <div class="hero-badge reveal" style="--delay:0s">
+        <span class="badge-dot"></span>
+        Open to Internships &amp; Hackathons
+      </div>
+
+      <!-- Name -->
+      <h1 class="hero-name reveal" style="--delay:.1s" aria-label="Biraj Acherjee">
+        <span class="name-line">Biraj</span>
+        <span class="name-line accent-line">Acherjee</span>
+      </h1>
+
+      <!-- Tagline with typing effect -->
+      <p class="hero-tagline reveal" style="--delay:.2s">
+        Building software solutions through
+        <span class="typed-wrap">
+          <span class="typed" id="typed-text" aria-live="polite"></span><span class="typed-cursor" aria-hidden="true">|</span>
+        </span>
+      </p>
+
+      <!-- Sub-info -->
+      <p class="hero-sub reveal" style="--delay:.3s">
+        B.Tech ECE · Narula Institute of Technology · Kolkata
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="hero-ctas reveal" style="--delay:.4s">
+        <a href="#projects" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          View Projects
+        </a>
+        <a href="resume.pdf" download class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Resume
+        </a>
+        <a href="#contact" class="btn-ghost">
+          Contact →
+        </a>
+      </div>
+
+      <!-- Social row -->
+      <div class="hero-socials reveal" style="--delay:.5s">
+        <a href="https://github.com/Biraj021" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.21 11.39.6.11.82-.26.82-.57v-2.24c-3.34.73-4.04-1.41-4.04-1.41-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.79 1.29 3.47.99.11-.77.42-1.29.76-1.59-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.87.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.69.82.57A12.01 12.01 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          Biraj021
+        </a>
+        <a href="https://www.linkedin.com/in/birajacherjee" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:birajacherjee7@gmail.com" aria-label="Email" class="social-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Email
+        </a>
+      </div>
     </div>
 
-    <div class="project">
-      <h3>🌐 Personal Portfolio Website</h3>
-      <p>A beginner portfolio built using only HTML and CSS to showcase my skills, projects, and contact info. This very site!</p>
-    </div>
-
-    <div class="project">
-      <h3>📅 To-Do List App</h3>
-      <p>A to-do list where users can add, delete, and check off tasks. Made with HTML, CSS, and beginner-level JavaScript.</p>
-    </div>
-
-    <div class="project">
-      <h3>🕶 Tribute Page</h3>
-      <p>A simple tribute webpage dedicated to a famous personality. Built as part of my HTML practice, featuring text, image, and layout design.</p>
+    <!-- Scroll indicator -->
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>scroll</span>
     </div>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript (Learning)</li>
-      <li>Git & GitHub</li>
-    </ul>
+  <!-- ═══════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════ -->
+  <section id="about" aria-label="About me">
+    <div class="container">
+      <div class="section-label reveal">01 — About</div>
+      <h2 class="section-title reveal" style="--delay:.05s">Who I Am</h2>
+
+      <div class="about-grid">
+        <!-- Avatar / visual -->
+        <div class="about-visual reveal" style="--delay:.1s">
+          <div class="avatar-card">
+            <div class="avatar-glyph" aria-hidden="true">
+              <div class="av-ring av-ring-1"></div>
+              <div class="av-ring av-ring-2"></div>
+              <div class="av-ring av-ring-3"></div>
+              <span class="av-initials">BA</span>
+            </div>
+            <div class="avatar-info">
+              <div class="av-stat"><span class="av-num" data-count="3">0</span><span>+</span><small>Projects</small></div>
+              <div class="av-divider"></div>
+              <div class="av-stat"><span class="av-num" data-count="3">0</span><span>+</span><small>Hackathons</small></div>
+              <div class="av-divider"></div>
+              <div class="av-stat"><span class="av-num" data-count="10">0</span><span>+</span><small>Technologies</small></div>
+            </div>
+            <div class="av-badge">
+              <span class="av-dot"></span> Available for Internship
+            </div>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text">
+          <p class="about-lead reveal" style="--delay:.15s">
+            I'm a <strong>B.Tech Electronics &amp; Communication Engineering</strong> student at <strong>Narula Institute of Technology, Kolkata</strong>, driven by a passion for building software that solves real problems.
+          </p>
+          <p class="about-body reveal" style="--delay:.2s">
+            My interests span across software development, artificial intelligence, and full-stack engineering. I'm currently deepening my skills in Data Structures &amp; Algorithms while building practical applications using Python, React, and modern web technologies.
+          </p>
+          <p class="about-body reveal" style="--delay:.25s">
+            Outside of code, I compete in hackathons — most recently finishing in the <strong>Top 10 at HACKINVERSE 0.5</strong> with team XCRYPT. I thrive under deadline pressure and love the collaborative energy of fast-paced build sprints.
+          </p>
+
+          <!-- Info chips -->
+          <div class="about-chips reveal" style="--delay:.3s">
+            <span class="chip">📍 Kolkata, India</span>
+            <span class="chip">🎓 B.Tech ECE · 2028</span>
+            <span class="chip">💼 Seeking Internships</span>
+            <span class="chip">⚡ Team XCRYPT</span>
+          </div>
+
+          <!-- Education block -->
+          <div class="edu-card reveal" style="--delay:.35s">
+            <div class="edu-icon" aria-hidden="true">🎓</div>
+            <div class="edu-details">
+              <strong>Narula Institute of Technology</strong>
+              <span>B.Tech — Electronics &amp; Communication Engineering</span>
+              <small>2024 – 2028 &nbsp;·&nbsp; Kolkata, West Bengal</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: birajacherjee7@gmail.com.com</p>
-    <p>GitHub: <a href="https://github.com/Biraj021" target="_blank">Biraj021</a></p>
+  <!-- ═══════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════ -->
+  <section id="skills" aria-label="Skills" class="section-alt">
+    <div class="container">
+      <div class="section-label reveal">02 — Skills</div>
+      <h2 class="section-title reveal" style="--delay:.05s">Technical Arsenal</h2>
+      <p class="section-sub reveal" style="--delay:.1s">Technologies and tools I work with.</p>
+
+      <div class="skills-grid" id="skills-grid">
+
+        <!-- Programming Languages -->
+        <div class="skill-group reveal" style="--delay:.1s">
+          <h3 class="skill-group-title">
+            <span class="skill-group-icon" aria-hidden="true">⌨️</span> Languages
+          </h3>
+          <div class="skill-cards">
+            <div class="skill-card" data-level="75"><span class="sk-name">C</span><span class="sk-bar"><span class="sk-fill" data-w="75"></span></span></div>
+            <div class="skill-card" data-level="82"><span class="sk-name">C++</span><span class="sk-bar"><span class="sk-fill" data-w="82"></span></span></div>
+            <div class="skill-card" data-level="88"><span class="sk-name">Python</span><span class="sk-bar"><span class="sk-fill" data-w="88"></span></span></div>
+            <div class="skill-card" data-level="78"><span class="sk-name">JavaScript</span><span class="sk-bar"><span class="sk-fill" data-w="78"></span></span></div>
+          </div>
+        </div>
+
+        <!-- Web -->
+        <div class="skill-group reveal" style="--delay:.15s">
+          <h3 class="skill-group-title">
+            <span class="skill-group-icon" aria-hidden="true">🌐</span> Web
+          </h3>
+          <div class="skill-cards">
+            <div class="skill-card" data-level="90"><span class="sk-name">HTML</span><span class="sk-bar"><span class="sk-fill" data-w="90"></span></span></div>
+            <div class="skill-card" data-level="84"><span class="sk-name">CSS</span><span class="sk-bar"><span class="sk-fill" data-w="84"></span></span></div>
+            <div class="skill-card" data-level="80"><span class="sk-name">React</span><span class="sk-bar"><span class="sk-fill" data-w="80"></span></span></div>
+          </div>
+        </div>
+
+        <!-- Libraries -->
+        <div class="skill-group reveal" style="--delay:.2s">
+          <h3 class="skill-group-title">
+            <span class="skill-group-icon" aria-hidden="true">📦</span> Libraries
+          </h3>
+          <div class="skill-cards">
+            <div class="skill-card" data-level="78"><span class="sk-name">NumPy</span><span class="sk-bar"><span class="sk-fill" data-w="78"></span></span></div>
+            <div class="skill-card" data-level="75"><span class="sk-name">Pandas</span><span class="sk-bar"><span class="sk-fill" data-w="75"></span></span></div>
+            <div class="skill-card" data-level="70"><span class="sk-name">Matplotlib</span><span class="sk-bar"><span class="sk-fill" data-w="70"></span></span></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-group reveal" style="--delay:.25s">
+          <h3 class="skill-group-title">
+            <span class="skill-group-icon" aria-hidden="true">🛠️</span> Tools
+          </h3>
+          <div class="skill-cards">
+            <div class="skill-card" data-level="85"><span class="sk-name">Git</span><span class="sk-bar"><span class="sk-fill" data-w="85"></span></span></div>
+            <div class="skill-card" data-level="85"><span class="sk-name">GitHub</span><span class="sk-bar"><span class="sk-fill" data-w="85"></span></span></div>
+            <div class="skill-card" data-level="72"><span class="sk-name">SQLite</span><span class="sk-bar"><span class="sk-fill" data-w="72"></span></span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tag cloud -->
+      <div class="tag-cloud reveal" style="--delay:.3s" aria-label="Additional technologies">
+        <span class="tag">Flask</span><span class="tag">Firebase</span><span class="tag">REST APIs</span>
+        <span class="tag">OOP</span><span class="tag">STL</span><span class="tag">Linux</span>
+        <span class="tag">VS Code</span><span class="tag">Postman</span><span class="tag">Vite</span>
+        <span class="tag">TypeScript</span>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 BIRAJ ACHERJEE. All rights reserved.</p>
+  <!-- ═══════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════ -->
+  <section id="projects" aria-label="Projects">
+    <div class="container">
+      <div class="section-label reveal">03 — Projects</div>
+      <h2 class="section-title reveal" style="--delay:.05s">Things I've Built</h2>
+      <p class="section-sub reveal" style="--delay:.1s">Selected work — real problems, real code.</p>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 1 — Emergency Healthcare Finder -->
+        <article class="project-card featured reveal" style="--delay:.1s" aria-label="Emergency Healthcare Finder project">
+          <div class="project-inner">
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">🏥</span>
+              <span class="project-badge">Featured</span>
+              <div class="project-links">
+                <a href="https://github.com/Biraj021" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="proj-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.21 11.39.6.11.82-.26.82-.57v-2.24c-3.34.73-4.04-1.41-4.04-1.41-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.79 1.29 3.47.99.11-.77.42-1.29.76-1.59-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.87.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.69.82.57A12.01 12.01 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="#" aria-label="Live demo" class="proj-link proj-link-ext">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Emergency Healthcare Finder</h3>
+            <p class="project-desc">A life-critical web app for instant emergency hospital discovery with SOS support and real-time proximity-based healthcare service mapping.</p>
+            <ul class="project-features" aria-label="Features">
+              <li>Real-time hospital discovery</li>
+              <li>SOS emergency response system</li>
+              <li>Location-based healthcare search</li>
+            </ul>
+            <div class="project-stack" aria-label="Tech stack">
+              <span>React</span><span>Firebase</span><span>Google Maps API</span><span>JavaScript</span>
+            </div>
+          </div>
+          <div class="project-glow" aria-hidden="true"></div>
+        </article>
+
+        <!-- PROJECT 2 — Smart Study Planner -->
+        <article class="project-card featured reveal" style="--delay:.15s" aria-label="Smart Study Planner project">
+          <div class="project-inner">
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">📚</span>
+              <span class="project-badge">Featured</span>
+              <div class="project-links">
+                <a href="https://github.com/Biraj021" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="proj-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.21 11.39.6.11.82-.26.82-.57v-2.24c-3.34.73-4.04-1.41-4.04-1.41-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.79 1.29 3.47.99.11-.77.42-1.29.76-1.59-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.87.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.69.82.57A12.01 12.01 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="#" aria-label="Live demo" class="proj-link proj-link-ext">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Smart Study Planner</h3>
+            <p class="project-desc">AI-powered productivity platform with intelligent scheduling, adaptive study plans, and progress tracking for students.</p>
+            <ul class="project-features" aria-label="Features">
+              <li>Smart adaptive scheduling</li>
+              <li>Task prioritisation engine</li>
+              <li>Progress analytics dashboard</li>
+            </ul>
+            <div class="project-stack" aria-label="Tech stack">
+              <span>Python</span><span>Flask</span><span>SQLite</span><span>JavaScript</span>
+            </div>
+          </div>
+          <div class="project-glow" aria-hidden="true"></div>
+        </article>
+
+        <!-- PROJECT 3 — Banking System -->
+        <article class="project-card reveal" style="--delay:.2s" aria-label="Banking Management System project">
+          <div class="project-inner">
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">🏦</span>
+              <div class="project-links">
+                <a href="https://github.com/Biraj021" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="proj-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.21 11.39.6.11.82-.26.82-.57v-2.24c-3.34.73-4.04-1.41-4.04-1.41-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.79 1.29 3.47.99.11-.77.42-1.29.76-1.59-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.87.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.69.82.57A12.01 12.01 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Banking Management System</h3>
+            <p class="project-desc">Console-based banking simulator showcasing OOP principles with full account lifecycle management and persistent transaction records.</p>
+            <ul class="project-features" aria-label="Features">
+              <li>OOP design patterns</li>
+              <li>Account &amp; transaction management</li>
+              <li>Data persistence via file I/O</li>
+            </ul>
+            <div class="project-stack" aria-label="Tech stack">
+              <span>C++</span><span>OOP</span><span>STL</span><span>File I/O</span>
+            </div>
+          </div>
+          <div class="project-glow" aria-hidden="true"></div>
+        </article>
+
+      </div>
+
+      <!-- GitHub CTA -->
+      <div class="projects-cta reveal" style="--delay:.25s">
+        <a href="https://github.com/Biraj021" target="_blank" rel="noopener noreferrer" class="btn-outline-full">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.21 11.39.6.11.82-.26.82-.57v-2.24c-3.34.73-4.04-1.41-4.04-1.41-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.79 1.29 3.47.99.11-.77.42-1.29.76-1.59-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.87.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.69.82.57A12.01 12.01 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          View all projects on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ACHIEVEMENTS
+  ═══════════════════════════════════════ -->
+  <section id="achievements" aria-label="Achievements" class="section-alt">
+    <div class="container">
+      <div class="section-label reveal">04 — Achievements</div>
+      <h2 class="section-title reveal" style="--delay:.05s">Milestones</h2>
+      <p class="section-sub reveal" style="--delay:.1s">Hackathons, certifications, and recognition.</p>
+
+      <div class="ach-grid">
+
+        <div class="ach-card reveal" style="--delay:.1s">
+          <div class="ach-icon" style="--ach-color:#fbbf24" aria-hidden="true">🏆</div>
+          <div class="ach-body">
+            <span class="ach-tag" style="--ach-color:#fbbf24">HACKATHON</span>
+            <h3 class="ach-title">HACKINVERSE 0.5 — Top 10</h3>
+            <p class="ach-desc">Competed against nationwide developers, finishing in the Top 10 with team XCRYPT in this major hackathon.</p>
+          </div>
+        </div>
+
+        <div class="ach-card reveal" style="--delay:.15s">
+          <div class="ach-icon" style="--ach-color:#38bdf8" aria-hidden="true">⚡</div>
+          <div class="ach-body">
+            <span class="ach-tag" style="--ach-color:#38bdf8">HACKATHON</span>
+            <h3 class="ach-title">HackArena — Participant</h3>
+            <p class="ach-desc">Delivered a working prototype under 24-hour sprint conditions as part of team XCRYPT.</p>
+          </div>
+        </div>
+
+        <div class="ach-card reveal" style="--delay:.2s">
+          <div class="ach-icon" style="--ach-color:#a78bfa" aria-hidden="true">🚀</div>
+          <div class="ach-body">
+            <span class="ach-tag" style="--ach-color:#a78bfa">HACKATHON</span>
+            <h3 class="ach-title">Tradition Hacks — Participant</h3>
+            <p class="ach-desc">Contributed to a full-stack project on Devfolio with team XCRYPT under competitive conditions.</p>
+          </div>
+        </div>
+
+        <div class="ach-card reveal" style="--delay:.25s">
+          <div class="ach-icon" style="--ach-color:#34d399" aria-hidden="true">📜</div>
+          <div class="ach-body">
+            <span class="ach-tag" style="--ach-color:#34d399">CERTIFICATION</span>
+            <h3 class="ach-title">NPTEL — DBMS</h3>
+            <p class="ach-desc">Completed NPTEL's Database Management Systems certification covering relational models, SQL, and normalisation.</p>
+          </div>
+        </div>
+
+        <div class="ach-card reveal" style="--delay:.3s">
+          <div class="ach-icon" style="--ach-color:#fb923c" aria-hidden="true">📱</div>
+          <div class="ach-body">
+            <span class="ach-tag" style="--ach-color:#fb923c">CERTIFICATION</span>
+            <h3 class="ach-title">Android Development Training</h3>
+            <p class="ach-desc">Completed structured training in Android application development fundamentals.</p>
+          </div>
+        </div>
+
+        <!-- Team card -->
+        <div class="ach-card ach-team reveal" style="--delay:.35s">
+          <div class="ach-icon" style="--ach-color:#38bdf8" aria-hidden="true">👥</div>
+          <div class="ach-body">
+            <span class="ach-tag" style="--ach-color:#38bdf8">TEAM</span>
+            <h3 class="ach-title">Team XCRYPT</h3>
+            <p class="ach-desc">Active hackathon team competing at HackInverse · HackArena · Tradition Hacks · Devfolio events.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section id="contact" aria-label="Contact">
+    <div class="container">
+      <div class="section-label reveal">05 — Contact</div>
+      <h2 class="section-title reveal" style="--delay:.05s">Let's Talk</h2>
+
+      <div class="contact-grid">
+        <!-- Left copy -->
+        <div class="contact-copy">
+          <p class="contact-lead reveal" style="--delay:.1s">
+            I'm actively seeking <strong>software developer</strong> and <strong>web developer internships</strong>. If you have an opportunity, a collaboration, or just want to say hi — reach out.
+          </p>
+          <div class="contact-links reveal" style="--delay:.15s">
+            <a href="mailto:birajacherjee7@gmail.com" class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">✉</div>
+              <div><span>Email</span><strong>birajacherjee7@gmail.com</strong></div>
+              <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://github.com/Biraj021" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.21 11.39.6.11.82-.26.82-.57v-2.24c-3.34.73-4.04-1.41-4.04-1.41-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.79 1.29 3.47.99.11-.77.42-1.29.76-1.59-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.87.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.69.82.57A12.01 12.01 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div><span>GitHub</span><strong>github.com/Biraj021</strong></div>
+              <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/birajacherjee" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg>
+              </div>
+              <div><span>LinkedIn</span><strong>linkedin.com/in/birajacherjee</strong></div>
+              <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact-form-wrap reveal" style="--delay:.15s">
+          <form id="contact-form" action="https://formspree.io/f/your_form_id" method="POST" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-name">Name <span aria-label="required">*</span></label>
+                <input type="text" id="cf-name" name="name" placeholder="Your name" required autocomplete="name" aria-required="true" />
+                <span class="field-err" id="err-name" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email <span aria-label="required">*</span></label>
+                <input type="email" id="cf-email" name="email" placeholder="your@email.com" required autocomplete="email" aria-required="true" />
+                <span class="field-err" id="err-email" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cf-subject">Subject <span aria-label="required">*</span></label>
+              <input type="text" id="cf-subject" name="subject" placeholder="Internship opportunity / Collaboration" required aria-required="true" />
+              <span class="field-err" id="err-subject" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message <span aria-label="required">*</span></label>
+              <textarea id="cf-message" name="message" rows="5" placeholder="Hi Biraj, I'd like to talk about..." required aria-required="true"></textarea>
+              <span class="field-err" id="err-message" role="alert"></span>
+            </div>
+            <button type="submit" class="btn-submit" id="btn-submit">
+              <span class="submit-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send Message
+              </span>
+              <span class="submit-loader" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+            </button>
+            <div id="form-success" class="form-msg form-msg-ok" role="alert" aria-live="polite" hidden>
+              ✓ Message sent! I'll get back to you soon.
+            </div>
+            <div id="form-error" class="form-msg form-msg-err" role="alert" aria-live="polite" hidden>
+              ✗ Something went wrong. Please email me directly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-box" aria-hidden="true">BA</span>
+        <span>Biraj Acherjee &mdash; Software Developer &amp; ECE Student</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">
+        &copy; <span id="year"></span> Biraj Acherjee &nbsp;&middot;&nbsp; Kolkata, India
+      </p>
+    </div>
   </footer>
 
+  <!-- Back to top -->
+  <button id="back-top" aria-label="Back to top" title="Back to top" hidden>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
