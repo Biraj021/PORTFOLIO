@@ -105,9 +105,9 @@ Learn → Build → Improve → Ship
 
 ## Connect
 
-GitHub      → github.com/Biraj021
-
-LinkedIn    → linkedin.com/in/birajacherjee
+- **GitHub**: [github.com/Biraj021](https://github.com/Biraj021)
+- **Live Demo**: [biraj021.github.io/PORTFOLIO](https://biraj021.github.io/PORTFOLIO/)
+- **LinkedIn**: [linkedin.com/in/birajacherjee](https://linkedin.com/in/birajacherjee)
 
 Email       → [birajacherjee7@gmail.com](mailto:birajacherjee7@gmail.com)
 
