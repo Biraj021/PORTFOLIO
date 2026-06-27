@@ -151,11 +151,8 @@ Learn → Build → Improve → Ship
 | Platform | Link |
 |----------|------|
 | GitHub   | [github.com/Biraj021](https://github.com/Biraj021) |
-
-|----------|-------|
 | LinkedIn | [linkedin.com/in/birajacherjee](https://linkedin.com/in/birajacherjee) |
-
-Email       → [birajacherjee7@gmail.com](mailto:birajacherjee7@gmail.com)
+| Email    | [birajacherjee7@gmail.com](mailto:birajacherjee7@gmail.com)
 
 ---
 
