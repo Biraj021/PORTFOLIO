@@ -40,23 +40,66 @@ Currently focused on building practical projects that solve real-world problems 
 
 ## Projects
 
+## 🚀 Featured Projects
+
 ### 🏥 Emergency Healthcare Finder
 
-Location-based emergency healthcare platform with hospital discovery and SOS support.
+A location-based healthcare platform that helps users quickly find nearby hospitals, clinics, pharmacies, and emergency services. Includes an SOS feature for faster emergency assistance.
 
-**Tech:** React • Firebase • Google Maps API
+**🔧 Tech Stack:** React • Firebase • Google Maps API • JavaScript
+
+**✨ Highlights:**
+
+* 📍 Real-time nearby hospital discovery
+* 🚑 One-tap SOS emergency support
+* 🗺️ Interactive Google Maps integration
+* 🔐 Secure Firebase backend
+
+---
+
+### 🌿 Tatva – Sustainable Living Platform
+
+An innovative platform designed to promote sustainable living by helping users track eco-friendly activities, discover green initiatives, and encourage environmentally conscious habits.
+
+**🔧 Tech Stack:** *(Update with your actual technologies, e.g., React • Node.js • MongoDB • Firebase)*
+
+**✨ Highlights:**
+
+* 🌱 Promote eco-friendly practices
+* 📊 Track sustainability progress
+* 👥 Community-driven initiatives
+* 📱 Modern and responsive interface
+
+---
 
 ### 📚 Smart Study Planner
 
-Productivity platform with adaptive study scheduling and progress tracking.
+An intelligent study management application that creates personalized study schedules, tracks progress, and helps students improve productivity.
 
-**Tech:** Python • Flask • SQLite
+**🔧 Tech Stack:** Python • Flask • SQLite
+
+**✨ Highlights:**
+
+* 📅 Personalized study planning
+* 📈 Progress tracking
+* ⏰ Task reminders
+* 📊 Performance insights
+
+---
 
 ### 🏦 Banking Management System
 
-Object-oriented banking application with account and transaction management.
+A console-based banking application built using Object-Oriented Programming principles, supporting secure account management and financial transactions.
 
-**Tech:** C++ • STL
+**🔧 Tech Stack:** C++ • STL • OOP
+
+**✨ Highlights:**
+
+* 💳 Account creation & management
+* 💰 Deposit, withdrawal & transfer
+* 📜 Transaction history
+* 🔒 Modular OOP architecture
+
 
 ---
 
