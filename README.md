@@ -161,13 +161,6 @@ Currently learning and building in:
 
 # 🌐 Portfolio
 
-<<<<<<< HEAD
-| Platform | Link |
-|----------|------|
-| GitHub   | [github.com/Biraj021](https://github.com/Biraj021) |
-| LinkedIn | [linkedin.com/in/birajacherjee](https://linkedin.com/in/birajacherjee) |
-|Email     | [birajacherjee7@gmail.com][def]
-=======
 🔗 **Live Portfolio**
 
 **https://biraj021.github.io/PORTFOLIO/**
@@ -182,6 +175,7 @@ Currently learning and building in:
 | 💻 GitHub    | https://github.com/Biraj021                                 |
 | 💼 LinkedIn  | https://linkedin.com/in/birajacherjee                       |
 | 📧 Email     | [birajacherjee7@gmail.com](mailto:birajacherjee7@gmail.com) |
+
 ---
 
 <div align="center">
@@ -191,6 +185,3 @@ Currently learning and building in:
 If you like my work, consider ⭐ starring my repositories!
 
 </div>
-
-
-[def]: mailto:birajacherjee7@gmail.com
