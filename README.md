@@ -182,7 +182,6 @@ Currently learning and building in:
 | 💻 GitHub    | https://github.com/Biraj021                                 |
 | 💼 LinkedIn  | https://linkedin.com/in/birajacherjee                       |
 | 📧 Email     | [birajacherjee7@gmail.com](mailto:birajacherjee7@gmail.com) |
-
 ---
 
 <div align="center">
