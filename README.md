@@ -1,163 +1,187 @@
 <div align="center">
 
-# Biraj Acherjee
+# 👋 Hi, I'm Biraj Acherjee
 
-### Software Developer • ECE Student • Hackathon Builder
+### 💻 Software Developer • 🤖 AI Enthusiast • ⚡ ECE Student • 🚀 Hackathon Builder
 
-Building software solutions through code, AI, and real-world problem solving.
+Building intelligent software solutions through code, AI, and real-world problem solving.
+
+[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-Live-0A66C2?style=for-the-badge)](https://biraj021.github.io/PORTFOLIO/)
+[![CV](https://img.shields.io/badge/📄_CV-PDF-red?style=for-the-badge)](./CV.pdf)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Biraj_Acherjee-0A66C2?style=for-the-badge\&logo=linkedin)](https://linkedin.com/in/birajacherjee)
+[![GitHub](https://img.shields.io/badge/GitHub-Biraj021-181717?style=for-the-badge\&logo=github)](https://github.com/Biraj021)
 
 </div>
 
 ---
 
-## About
+# 👨‍💻 About Me
 
-I'm a B.Tech Electronics & Communication Engineering student at Narula Institute of Technology.
+I'm a **B.Tech Electronics & Communication Engineering** student at **Narula Institute of Technology** with a passion for building impactful software, exploring Artificial Intelligence, and solving real-world problems through technology.
 
-My interests include:
+I enjoy participating in hackathons, learning modern development tools, and continuously improving my problem-solving skills.
 
-* Software Development
-* Artificial Intelligence
-* Full Stack Engineering
-* Open Source
-* Hackathons
+### 🎯 Interests
 
-Currently focused on building practical projects that solve real-world problems while strengthening my foundation in Data Structures & Algorithms.
-
----
-
-## Highlights
-
-🏆 **Best Boys Team Award — Synchronicity S2 2026**
-
-🥇 **Top 10 Finalist — HACKINVERSE 0.5**
-
-🚀 Active Hackathon Competitor
-
-💼 Open to Internship Opportunities
+* 💻 Software Development
+* 🤖 Artificial Intelligence & Machine Learning
+* 🌐 Full Stack Development
+* 🏆 Hackathons & Innovation
+* 🌱 Open Source Contribution
 
 ---
 
-## Projects
+# 🏆 Achievements
 
-## 🚀 Featured Projects
+* 🏆 **Best Boys Team Award** — Synchronicity S2 2026
+* 🥇 **Top 10 Finalist** — HACKINVERSE 0.5
+* 🚀 Active Hackathon Competitor
+* 💼 Open to Internship Opportunities
 
-### 🏥 Emergency Healthcare Finder
+---
 
-A location-based healthcare platform that helps users quickly find nearby hospitals, clinics, pharmacies, and emergency services. Includes an SOS feature for faster emergency assistance.
+# 🚀 Featured Projects
 
-**🔧 Tech Stack:** React • Firebase • Google Maps API • JavaScript
+## 🏥 Emergency Healthcare Finder
 
-**✨ Highlights:**
+A location-based healthcare platform that helps users quickly locate nearby hospitals, clinics, pharmacies, and emergency services with integrated SOS support.
 
-* 📍 Real-time nearby hospital discovery
-* 🚑 One-tap SOS emergency support
-* 🗺️ Interactive Google Maps integration
+**🛠 Tech Stack**
+
+React • Firebase • Google Maps API • JavaScript
+
+**✨ Features**
+
+* 📍 Real-time hospital discovery
+* 🚑 SOS emergency assistance
+* 🗺️ Google Maps integration
 * 🔐 Secure Firebase backend
 
 ---
 
-### 🌿 Tatva – Sustainable Living Platform
+## 🌿 Tatva – Sustainable Living Platform
 
-An innovative platform designed to promote sustainable living by helping users track eco-friendly activities, discover green initiatives, and encourage environmentally conscious habits.
+A sustainability-focused platform designed to encourage eco-friendly habits, promote green initiatives, and help users track their environmental impact.
 
-**🔧 Tech Stack:** *(Update with your actual technologies, e.g., React • Node.js • MongoDB • Firebase)*
+**🛠 Tech Stack**
 
-**✨ Highlights:**
+React • Firebase • JavaScript *(Update if different)*
 
-* 🌱 Promote eco-friendly practices
-* 📊 Track sustainability progress
-* 👥 Community-driven initiatives
-* 📱 Modern and responsive interface
+**✨ Features**
+
+* 🌱 Eco-friendly habit tracking
+* 📊 Sustainability dashboard
+* 👥 Community participation
+* 📱 Responsive modern interface
 
 ---
 
-### 📚 Smart Study Planner
+## 📚 Smart Study Planner
 
-An intelligent study management application that creates personalized study schedules, tracks progress, and helps students improve productivity.
+An intelligent study planner that generates personalized schedules, tracks learning progress, and improves productivity.
 
-**🔧 Tech Stack:** Python • Flask • SQLite
+**🛠 Tech Stack**
 
-**✨ Highlights:**
+Python • Flask • SQLite
 
-* 📅 Personalized study planning
+**✨ Features**
+
+* 📅 Smart study scheduling
 * 📈 Progress tracking
 * ⏰ Task reminders
 * 📊 Performance insights
 
 ---
 
-### 🏦 Banking Management System
+## 🏦 Banking Management System
 
-A console-based banking application built using Object-Oriented Programming principles, supporting secure account management and financial transactions.
+A console-based banking application developed using Object-Oriented Programming concepts.
 
-**🔧 Tech Stack:** C++ • STL • OOP
+**🛠 Tech Stack**
 
-**✨ Highlights:**
+C++ • STL • OOP
 
-* 💳 Account creation & management
-* 💰 Deposit, withdrawal & transfer
+**✨ Features**
+
+* 💳 Account management
+* 💰 Deposit & withdrawal
 * 📜 Transaction history
-* 🔒 Modular OOP architecture
-
-
----
-
-## Tech Stack
-
-```txt
-Languages
-├── C
-├── C++
-├── Python
-└── JavaScript
-
-Frontend
-├── HTML
-├── CSS
-└── React
-
-Backend
-├── Flask
-└── Firebase
-
-Database
-└── SQLite
-
-Tools
-├── Git
-├── GitHub
-├── VS Code
-└── Postman
-```
+* 🔒 Modular architecture
 
 ---
 
-## Current Focus
+# 🛠 Tech Stack
 
-```txt
+### Programming Languages
+
+* C
+* C++
+* Python
+* JavaScript
+
+### Frontend
+
+* HTML
+* CSS
+* React
+
+### Backend
+
+* Flask
+* Firebase
+
+### Database
+
+* SQLite
+
+### Tools
+
+* Git
+* GitHub
+* VS Code
+* Postman
+
+---
+
+# 📚 Current Focus
+
+```text
 Learn → Build → Improve → Ship
 ```
 
-* Data Structures & Algorithms
-* Full Stack Development
-* Artificial Intelligence
-* Real-World Product Development
+Currently learning and building in:
+
+* 📌 Data Structures & Algorithms
+* 🌐 Full Stack Development
+* 🤖 Artificial Intelligence
+* ⚛️ React Ecosystem
+* 🚀 Real-World Product Development
 
 ---
 
-## Connect
+# 🌐 Portfolio
 
-| Platform | Link |
-|----------|------|
-| GitHub   | [github.com/Biraj021](https://github.com/Biraj021) |
-| LinkedIn | [linkedin.com/in/birajacherjee](https://linkedin.com/in/birajacherjee) |
-| Email    | [birajacherjee7@gmail.com](mailto:birajacherjee7@gmail.com)
+🔗 **Live Portfolio**
+
+**https://biraj021.github.io/PORTFOLIO/**
+
+---
+
+# 📬 Connect With Me
+
+| Platform     | Link                                                        |
+| ------------ | ----------------------------------------------------------- |
+| 🌐 Portfolio | https://biraj021.github.io/PORTFOLIO/                       |
+| 💻 GitHub    | https://github.com/Biraj021                                 |
+| 💼 LinkedIn  | https://linkedin.com/in/birajacherjee                       |
+| 📧 Email     | [birajacherjee7@gmail.com](mailto:birajacherjee7@gmail.com) |
 
 ---
 
 <div align="center">
 
-### Building solutions today for the problems of tomorrow.
+### ⭐ Building solutions today for the problems of tomorrow.
+
+If you like my work, consider ⭐ starring my repositories!
 
 </div>
