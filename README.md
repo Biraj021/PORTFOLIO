@@ -1,10 +1,10 @@
 <div align="center">
 
 # 👋 Hi, I'm Biraj Acherjee
-
+    
 ### 💻 Software Developer • 🤖 AI Enthusiast • ⚡ ECE Student • 🚀 Hackathon Builder
 
-Building intelligent software solutions through code, AI, and real-world problem solving.
+   Building intelligent software solutions through code, AI, and real-world problem solving.
 
 [![Portfolio](https://img.shields.io/badge/🌐_Portfolio-Live-0A66C2?style=for-the-badge)](https://biraj021.github.io/PORTFOLIO/)
 [![CV](https://img.shields.io/badge/📄_CV-PDF-red?style=for-the-badge)](./CV.pdf)
